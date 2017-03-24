@@ -34,7 +34,7 @@ class App extends Component {
       <div className="app-container">
         <Header layout={this.state.layout} changeLayout={this.changeLayout} />
         <div className="movies-list">
-    		{movieService.movies.map(movie => {
+    		{this.state.movies.map(movie => {
     			return (
     				<MovieContainer key={movie.imdbID} {...movie} layout={layout} /> 
     			)
